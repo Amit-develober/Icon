@@ -3,101 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit's Projects</title>
+    <title>Amit's Projects — Creative Portfolio</title>
+    <meta name="description" content="Explore Amit's creative projects — tools, games, and quizzes built with passion.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <!-- Animated background particles -->
+    <div class="bg-particles" id="particles"></div>
+    
+    <!-- Floating gradient orbs -->
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+
+    <header id="site-header">
         <nav>
-            <div class="logo">Amit Project</div>
+            <div class="logo" id="logo">
+                <span class="logo-icon"><i class="fas fa-rocket"></i></span>
+                <span class="logo-text">Amit<span class="logo-dot">.</span>dev</span>
+            </div>
+            <div class="nav-badge">
+                <span class="badge-pulse"></span>
+                <span class="badge-text">10 Projects</span>
+            </div>
         </nav>
     </header>
     
     <main>
-        <h1>Click Icon for Vist </h1>
-        <div class="icon-grid">
-            <a href="https://amit-develober.github.io/BG/" class="card" target="_blank">
-                <div class="icon-wrapper">
-                    <i class="fas fa-image"></i>
+        <section class="hero" id="hero-section">
+            <div class="hero-tag">
+                <i class="fas fa-sparkles"></i>
+                <span>Creative Developer Portfolio</span>
+            </div>
+            <h1 id="main-heading">
+                <span class="heading-line">Explore My</span>
+                <span class="heading-line gradient-text">Creative Projects</span>
+            </h1>
+            <p class="hero-subtitle">Click on any card to launch the project — each one is live and interactive!</p>
+        </section>
+
+        <div class="icon-grid" id="project-grid">
+            <a href="https://amit-develober.github.io/BG/" class="card" target="_blank" id="card-bg" style="--card-index: 0; --card-accent: #06b6d4; --card-accent-rgb: 6,182,212;">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
                     <h3>BG Removal</h3>
+                    <p>Remove image backgrounds easily</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <p>Remove image backgrounds easily</p>
             </a>
             
-            <a href="https://amit-develober.github.io/ScreenD/" class="card" target="_blank">
-                <div class="icon-wrapper">
-                    <i class="fas fa-video"></i>
-                    <h3>Screen Recorder Only For omputer</h3>
+            <a href="https://amit-develober.github.io/ScreenD/" class="card" target="_blank" id="card-screen" style="--card-index: 1; --card-accent: #8b5cf6; --card-accent-rgb: 139,92,246;">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-video"></i>
+                        </div>
+                    </div>
+                    <h3>Screen Recorder</h3>
+                    <p>Record your computer screen</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <p>Record your computer screen</p>
             </a>
             
-            <a href="https://amit-develober.github.io/Amit/" class="card" target="_blank">
-                <div class="icon-wrapper">
-                    <i class="fas fa-gamepad"></i>
+            <a href="https://amit-develober.github.io/Amit/" class="card" target="_blank" id="card-tictactoe" style="--card-index: 2; --card-accent: #f43f5e; --card-accent-rgb: 244,63,94;">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
                     <h3>Tic Tac Toe</h3>
+                    <p>Classic game reimagined</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <p>Classic game reimagined</p>
             </a>
             
-            <a href="https://amit-develober.github.io/DL/" class="card" target="_blank">
-                <div class="icon-wrapper">
-                    <i class="fas fa-book"></i>
+            <a href="https://amit-develober.github.io/DL/" class="card" target="_blank" id="card-library" style="--card-index: 3; --card-accent: #10b981; --card-accent-rgb: 16,185,129;">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
                     <h3>Digital Library</h3>
+                    <p>Your virtual bookshelf</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <p>Your virtual bookshelf</p>
             </a>
 
-            <a href="https://amit-develober.github.io/jolly/" class="card" target="_blank">
-                <div class="icon-wrapper">
-                    <i class="fas fa-laugh-squint"></i>
+            <a href="https://amit-develober.github.io/jolly/" class="card" target="_blank" id="card-haha" style="--card-index: 4; --card-accent: #f59e0b; --card-accent-rgb: 245,158,11;">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-laugh-squint"></i>
+                        </div>
+                    </div>
                     <h3>Hahahaha</h3>
+                    <p>Click for fun!</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <p>Click for fun!</p>
             </a>
             
-            <a href="https://amit-develober.github.io/mt/" class="card" target="_blank">
-                <div class="icon-wrapper">
-                    <i class="fas fa-calculator"></i>
+            <a href="https://amit-develober.github.io/mt/" class="card" target="_blank" id="card-math" style="--card-index: 5; --card-accent: #3b82f6; --card-accent-rgb: 59,130,246;">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                    </div>
                     <h3>Math Game</h3>
+                    <p>Fun with numbers</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <p>Fun with numbers</p>
             </a>
             
-            <a href="https://amit-develober.github.io/gK/" class="card" target="_blank">
-                <div class="icon-wrapper">
-                    <i class="fas fa-trophy"></i>
+            <a href="https://amit-develober.github.io/gK/" class="card" target="_blank" id="card-quiz" style="--card-index: 6; --card-accent: #ec4899; --card-accent-rgb: 236,72,153;">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
                     <h3>Indian Quiz</h3>
+                    <p>Test your knowledge</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <p>Test your knowledge</p>
             </a>
             
-            <a href="https://amit-develober.github.io/CP/" class="card" target="_blank">
-                <div class="icon-wrapper">
-                    <i class="fas fa-compress-alt"></i>
+            <a href="https://amit-develober.github.io/CP/" class="card" target="_blank" id="card-shrinker" style="--card-index: 7; --card-accent: #14b8a6; --card-accent-rgb: 20,184,166;">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-compress-alt"></i>
+                        </div>
+                    </div>
                     <h3>Shrinker</h3>
+                    <p>Compress and optimize</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <p>Compress and optimize</p>
             </a>
 
-             <a href="https://amit-develober.github.io/BMI/" class="card" target="_blank">
-                <div class="icon-wrapper">
-                    <i class="fas fa-calculator"></i>
+            <a href="https://amit-develober.github.io/BMI/" class="card" target="_blank" id="card-bmi" style="--card-index: 8; --card-accent: #6366f1; --card-accent-rgb: 99,102,241;">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
                     <h3>BMI Calculator</h3>
+                    <p>Check your body mass index</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <p>Compress and optimize</p>
             </a>
             
-            <a href="https://amit-develober.github.io/ScienceQuize" class="card" target="_blank">
-                <div class="icon-wrapper">
-                    <i class="fas fa-flask"></i>
+            <a href="https://amit-develober.github.io/ScienceQuize" class="card" target="_blank" id="card-science" style="--card-index: 9; --card-accent: #a855f7; --card-accent-rgb: 168,85,247;">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                    </div>
                     <h3>Science Quiz</h3>
+                    <p>Test your science knowledge</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <p>Test your science knowledge</p>
             </a>
         </div>
     </main>
+
+    <footer id="site-footer">
+        <div class="footer-content">
+            <p>Made with <i class="fas fa-heart heart-beat"></i> by Amit</p>
+            <p class="footer-sub">© 2026 — All projects are live & interactive</p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Particle Background =====
+        const particleContainer = document.getElementById('particles');
+        function createParticles() {
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.width = Math.random() * 4 + 1 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = Math.random() * 4 + 4 + 's';
+                particleContainer.appendChild(particle);
+            }
+        }
+        createParticles();
+
+        // ===== Scroll-triggered Card Animations (Intersection Observer) =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // ===== Interactive Card Tilt Effect =====
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 12;
+                const rotateY = (centerX - x) / 12;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.04, 1.04, 1.04)`;
+                
+                // Move glow
+                const glow = card.querySelector('.card-glow');
+                if (glow) {
+                    glow.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(var(--card-accent-rgb), 0.15), transparent 40%)`;
+                }
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+                const glow = card.querySelector('.card-glow');
+                if (glow) {
+                    glow.style.background = '';
+                }
+            });
+        });
+
+        // ===== Typing Effect for Hero Title =====
+        const heroTag = document.querySelector('.hero-tag span');
+        if (heroTag) {
+            const text = heroTag.textContent;
+            heroTag.textContent = '';
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    heroTag.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            setTimeout(typeWriter, 800);
+        }
+
+        // ===== Smooth Parallax on Scroll =====
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const orbs = document.querySelectorAll('.gradient-orb');
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 0.3;
+                orb.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // ===== Header shrink on scroll =====
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('site-header');
+            if (window.scrollY > 60) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
