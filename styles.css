@@ -188,7 +188,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: rocketPulse 3s ease-in-out infinite;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--bg-secondary); /* Add background for round appearance */
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3); /* Subtle glow */
 }
 
 .logo-icon img {
@@ -198,10 +201,6 @@ nav {
     filter: drop-shadow(0 4px 6px rgba(168, 85, 247, 0.4));
 }
 
-@keyframes rocketPulse {
-    0%, 100% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.05) rotate(-5deg); }
-}
 
 .logo-text {
     font-family: 'Space Grotesk', sans-serif;
