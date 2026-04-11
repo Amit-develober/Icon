@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit's Projects — Creative Portfolio</title>
-    <meta name="description" content="Explore Amit's creative projects — tools, games, and quizzes built with passion.">
+    <title>Amit Kushwaha | Professional Cyber Security & Python Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Amit Kushwaha, a Class 11 student and Cyber Security enthusiast specializing in Python and Vibe Coding.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
-    <!-- Animated background particles -->
-    <div class="bg-particles" id="particles"></div>
-    
-    <!-- Floating gradient orbs -->
-    <div class="gradient-orb orb-1"></div>
-    <div class="gradient-orb orb-2"></div>
-    <div class="gradient-orb orb-3"></div>
+    <!-- Background Decorations -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
     <header id="site-header">
         <nav>
             <div class="logo" id="logo">
-                <span class="logo-icon"><img src="logo.png" alt="Logo"></span>
-                <span class="logo-text">Amit<span class="logo-dot">.</span>dev</span>
+                <span class="logo-icon"><img src="logo.png" alt="Amit Kushwaha Cyber Security Logo"></span>
+                <span class="logo-text">Amit <span class="logo-accent">Kushwaha</span></span>
             </div>
-            <div class="nav-badge">
-                <span class="badge-pulse"></span>
-                <span class="badge-text">12 Projects</span>
+            <div class="nav-links">
+                <div class="nav-status">
+                    <span class="status-pulse"></span>
+                    <span>Available for Projects</span>
+                </div>
+                <a href="#hero-section" class="nav-link" aria-label="Navigate to Home">Home</a>
+                <a href="#about-skills" class="nav-link" aria-label="Navigate to About">About</a>
+                <a href="#project-grid" class="nav-link" aria-label="Navigate to Projects">Projects</a>
+                <a href="#contact" class="nav-link" aria-label="Navigate to Contact">Contact</a>
             </div>
         </nav>
     </header>
@@ -35,163 +40,185 @@
     <main>
         <section class="hero" id="hero-section">
             <div class="hero-tag">
-                <i class="fas fa-sparkles"></i>
-                <span>Creative Developer Portfolio</span>
+                <i class="fas fa-terminal"></i>
+                <span id="typing-badge">Cyber Security Enthusiast</span>
             </div>
             <h1 id="main-heading">
-                <span class="heading-line">Explore My</span>
-                <span class="heading-line gradient-text">Creative Projects</span>
+                <span class="heading-line">Hi, I'm Amit</span>
+                <span class="heading-line gradient-text">Securing the Future.</span>
             </h1>
-            <p class="hero-subtitle">Click on any card to launch the project — each one is live and interactive!</p>
+            <p class="hero-subtitle">Class 11 student passionate about Cyber Security, Python development, and high-performance Vibe Coding.</p>
         </section>
 
+        <!-- About & Skills Section -->
+        <section class="about-skills" id="about-skills">
+            <div class="section-grid">
+                <div class="about-card">
+                    <h3><i class="fas fa-user-shield"></i> About Me</h3>
+                    <p>I am a dedicated Class 11 student and independent developer pushing the boundaries of technology. My journey is focused on Cyber Security, Python engineering, and the philosophy of "Vibe Coding" — creating software that is technically superior and visually stunning.</p>
+
+                </div>
+                <div class="skills-card">
+                    <h3><i class="fas fa-code"></i> Core Skills</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Python Deep Dive</span>
+                        <span class="skill-tag">Cyber Security</span>
+                        <span class="skill-tag">Automation Architect</span>
+                        <span class="skill-tag">Technical UX</span>
+                    </div>
+                    <div class="tech-stack" style="margin-top: 1.5rem; display: flex; gap: 1rem; opacity: 0.7;">
+                        <i class="fab fa-python" title="Python"></i>
+                        <i class="fab fa-linux" title="Linux"></i>
+                        <i class="fab fa-github" title="GitHub"></i>
+                        <i class="fas fa-terminal" title="Terminal"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-header">
+            <h2><i class="fas fa-cubes"></i> Featured Projects</h2>
+            <p>A collection of my creative work and technical experiments.</p>
+        </div>
+
         <div class="icon-grid" id="project-grid">
-            <a href="https://amit-develober.github.io/BG/" class="card" target="_blank" id="card-bg" style="--card-index: 0; --card-accent: #06b6d4; --card-accent-rgb: 6,182,212;">
-                <div class="card-glow"></div>
+            <a href="https://amit-develober.github.io/BG/" class="card" target="_blank" id="card-bg" style="--card-accent: #6366f1; --card-accent-rgb: 99,102,241;">
+                <div class="card-accent-line"></div>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <div class="icon-bg">
-                            <i class="fas fa-image"></i>
+                            <i class="fas fa-shield-virus"></i>
                         </div>
                     </div>
                     <h3>BG Removal</h3>
-                    <p>Remove image backgrounds easily</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <p>AI-driven background subtraction for high-quality assets.</p>
+                    <div class="card-tags">
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag" style="background: #f1f5f9; color: #475569;">PYTHON / AI</span>
                     </div>
                 </div>
             </a>
             
-            <a href="https://amit-develober.github.io/ScreenD/" class="card" target="_blank" id="card-screen" style="--card-index: 1; --card-accent: #8b5cf6; --card-accent-rgb: 139,92,246;">
-                <div class="card-glow"></div>
+            <a href="https://amit-develober.github.io/ScreenD/" class="card" target="_blank" id="card-screen" style="--card-accent: #06b6d4; --card-accent-rgb: 6,182,212;">
+                <div class="card-accent-line"></div>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <div class="icon-bg">
-                            <i class="fas fa-video"></i>
+                            <i class="fas fa-desktop"></i>
                         </div>
                     </div>
                     <h3>Screen Recorder</h3>
-                    <p>Record your computer screen</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <p>Evidence capture tool for testing</p>
+                    <div class="card-tags">
+                        <span class="tag">System</span>
                     </div>
                 </div>
             </a>
             
-            <a href="https://amit-develober.github.io/Amit/" class="card" target="_blank" id="card-tictactoe" style="--card-index: 2; --card-accent: #f43f5e; --card-accent-rgb: 244,63,94;">
-                <div class="card-glow"></div>
+            <a href="https://amit-develober.github.io/DL/" class="card" target="_blank" id="card-library" style="--card-accent: #10b981; --card-accent-rgb: 16,185,129;">
+                <div class="card-accent-line"></div>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <div class="icon-bg">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                    </div>
-                    <h3>Tic Tac Toe</h3>
-                    <p>Classic game reimagined</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://amit-develober.github.io/DL/" class="card" target="_blank" id="card-library" style="--card-index: 3; --card-accent: #10b981; --card-accent-rgb: 16,185,129;">
-                <div class="card-glow"></div>
-                <div class="card-content">
-                    <div class="icon-wrapper">
-                        <div class="icon-bg">
-                            <i class="fas fa-book"></i>
+                            <i class="fas fa-user-secret"></i>
                         </div>
                     </div>
                     <h3>Digital Library</h3>
-                    <p>Your virtual bookshelf</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <p>High-integrity digital resource vault for students.</p>
+                    <div class="card-tags">
+                        <span class="tag">Database</span>
+                        <span class="tag">Security</span>
+                        <span class="tag" style="background: #f1f5f9; color: #475569;">JS / STORAGE</span>
                     </div>
                 </div>
             </a>
 
-            <a href="https://amit-develober.github.io/jolly/" class="card" target="_blank" id="card-haha" style="--card-index: 4; --card-accent: #f59e0b; --card-accent-rgb: 245,158,11;">
-                <div class="card-glow"></div>
+            <a href="https://amit-develober.github.io/CP/" class="card" target="_blank" id="card-shrinker" style="--card-accent: #0ea5e9; --card-accent-rgb: 14,165,233;">
+                <div class="card-accent-line"></div>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <div class="icon-bg">
-                            <i class="fas fa-laugh-squint"></i>
+                            <i class="fas fa-file-contract"></i>
                         </div>
                     </div>
-                    <h3>Hahahaha</h3>
-                    <p>Click for fun!</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <h3>File Shrinker Pro</h3>
+                    <p>Advanced algorithmic file compression for secure storage.</p>
+                    <div class="card-tags">
+                        <span class="tag">Optimization</span>
+                        <span class="tag" style="background: #f1f5f9; color: #475569;">ALGORITHMS</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://amit-develober.github.io/jolly/" class="card" target="_blank" id="card-haha" style="--card-accent: #f59e0b; --card-accent-rgb: 245,158,11;">
+                <div class="card-accent-line"></div>
+                <div class="card-content">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg">
+                            <i class="fas fa-ghost"></i>
+                        </div>
+                    </div>
+                    <h3>Cyber Fun</h3>
+                    <p>Interactive playground experiment</p>
+                    <div class="card-tags">
+                        <span class="tag">Fun</span>
+                        <span class="tag">UI</span>
                     </div>
                 </div>
             </a>
             
-            <a href="https://amit-develober.github.io/mt/" class="card" target="_blank" id="card-math" style="--card-index: 5; --card-accent: #3b82f6; --card-accent-rgb: 59,130,246;">
-                <div class="card-glow"></div>
+            <a href="https://amit-develober.github.io/mt/" class="card" target="_blank" id="card-math" style="--card-accent: #a855f7; --card-accent-rgb: 168,85,247;">
+                <div class="card-accent-line"></div>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <div class="icon-bg">
                             <i class="fas fa-calculator"></i>
                         </div>
                     </div>
-                    <h3>Math Game</h3>
-                    <p>Fun with numbers</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <h3>Logic Engine</h3>
+                    <p>Mathematical logic and computation</p>
+                    <div class="card-tags">
+                        <span class="tag">Education</span>
                     </div>
                 </div>
             </a>
             
-            <a href="https://amit-develober.github.io/gK/" class="card" target="_blank" id="card-quiz" style="--card-index: 6; --card-accent: #ec4899; --card-accent-rgb: 236,72,153;">
-                <div class="card-glow"></div>
+            <a href="https://amit-develober.github.io/gK/" class="card" target="_blank" id="card-quiz" style="--card-accent: #f43f5e; --card-accent-rgb: 244,63,94;">
+                <div class="card-accent-line"></div>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <div class="icon-bg">
-                            <i class="fas fa-trophy"></i>
+                            <i class="fas fa-microchip"></i>
                         </div>
                     </div>
-                    <h3>Indian Quiz</h3>
-                    <p>Test your knowledge</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://amit-develober.github.io/CP/" class="card" target="_blank" id="card-shrinker" style="--card-index: 7; --card-accent: #14b8a6; --card-accent-rgb: 20,184,166;">
-                <div class="card-glow"></div>
-                <div class="card-content">
-                    <div class="icon-wrapper">
-                        <div class="icon-bg">
-                            <i class="fas fa-compress-alt"></i>
-                        </div>
-                    </div>
-                    <h3>Shrinker</h3>
-                    <p>Compress and optimize</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <h3>Info Quiz Core</h3>
+                    <p>Technical knowledge testing platform for modern engineers.</p>
+                    <div class="card-tags">
+                        <span class="tag">Educational</span>
+                        <span class="tag" style="background: #f1f5f9; color: #475569;">JSON / DOM</span>
                     </div>
                 </div>
             </a>
 
-            <a href="https://amit-develober.github.io/BMI/" class="card" target="_blank" id="card-bmi" style="--card-index: 8; --card-accent: #6366f1; --card-accent-rgb: 99,102,241;">
-                <div class="card-glow"></div>
+            <a href="https://amit-develober.github.io/BMI/" class="card" target="_blank" id="card-bmi" style="--card-accent: #6366f1; --card-accent-rgb: 99,102,241;">
+                <div class="card-accent-line"></div>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <div class="icon-bg">
                             <i class="fas fa-heartbeat"></i>
                         </div>
                     </div>
-                    <h3>BMI Calculator</h3>
-                    <p>Check your body mass index</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <h3>BMI (Body Mass Index)</h3>
+                    <p>Health and metric analysis tool</p>
+                    <div class="card-tags">
+                        <span class="tag">Health</span>
+                        <span class="tag">Python</span>
                     </div>
                 </div>
             </a>
             
-            <a href="https://amit-develober.github.io/ScienceQuize" class="card" target="_blank" id="card-science" style="--card-index: 9; --card-accent: #a855f7; --card-accent-rgb: 168,85,247;">
-                <div class="card-glow"></div>
+            <a href="https://amit-develober.github.io/ScienceQuize" class="card" target="_blank" id="card-science" style="--card-accent: #8b5cf6; --card-accent-rgb: 139,92,246;">
+                <div class="card-accent-line"></div>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <div class="icon-bg">
@@ -199,73 +226,90 @@
                         </div>
                     </div>
                     <h3>Science Quiz</h3>
-                    <p>Test your science knowledge</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <p>Testing scientific knowledge bases</p>
+                    <div class="card-tags">
+                        <span class="tag">Science</span>
                     </div>
                 </div>
             </a>
 
-            <a href="https://amit-develober.github.io/2048/" class="card" target="_blank" id="card-2048" style="--card-index: 10; --card-accent: #fbbf24; --card-accent-rgb: 251,191,36;">
-                <div class="card-glow"></div>
+            <a href="https://amit-develober.github.io/2048/" class="card" target="_blank" id="card-2048" style="--card-accent: #f59e0b; --card-accent-rgb: 245,158,11;">
+                <div class="card-accent-line"></div>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <div class="icon-bg">
-                            <i class="fas fa-th"></i>
+                            <i class="fas fa-puzzle-piece"></i>
                         </div>
                     </div>
-                    <h3>2048 Game</h3>
-                    <p>Merge the numbers to win</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <h3>2048</h3>
+                    <p>Strategic number merging game</p>
+                    <div class="card-tags">
+                        <span class="tag">Game</span>
+                        <span class="tag">Logic</span>
                     </div>
                 </div>
             </a>
 
-            <a href="https://amit-develober.github.io/DiL" class="card" target="_blank" id="card-dil" style="--card-index: 11; --card-accent: #ff4d00; --card-accent-rgb: 255,77,0;">
-                <div class="card-glow"></div>
+            <a href="https://amit-develober.github.io/DiL" class="card" target="_blank" id="card-dil" style="--card-accent: #ec4899; --card-accent-rgb: 236,72,153;">
+                <div class="card-accent-line"></div>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <div class="icon-bg">
-                            <i class="fas fa-graduation-cap"></i>
+                            <i class="fas fa-code-branch"></i>
                         </div>
                     </div>
                     <h3>DiL</h3>
-                    <p>Next-gen Digital Library</p>
-                    <div class="card-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <p>Advanced digital repository system</p>
+                    <div class="card-tags">
+                        <span class="tag">Resource</span>
+                        <span class="tag">Web</span>
                     </div>
                 </div>
             </a>
         </div>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="section-header">
+                <h2><i class="fas fa-envelope-open-text"></i> Get In Touch</h2>
+                <p>Have a question or want to collaborate? Click below to reveal my secure contact info.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-box" id="contact-box">
+                    <button class="reveal-btn" id="reveal-btn">
+                        <i class="fas fa-lock"></i> Reveal Email Address
+                    </button>
+                    <div class="email-revealed" id="email-revealed" style="display: none;">
+                        <span class="email-text">rajukushwaha0891@gmail.com</span>
+                        <button class="copy-btn" id="copy-btn" title="Copy to clipboard" aria-label="Copy Email Address">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="copy-success" id="copy-success">Email copied!</div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="site-footer">
         <div class="footer-content">
-            <p>Made with <i class="fas fa-heart heart-beat"></i> by Amit</p>
-            <p class="footer-sub">© 2026 — All projects are live & interactive</p>
+            <p>Designed & Developed by <span class="logo-accent gradient-text">Amit Kushwaha</span></p>
+            <p class="footer-sub">© 2026 — Class 11 Student | Cyber Security & Python</p>
         </div>
     </footer>
 
-    <script>
-        // ===== Particle Background =====
-        const particleContainer = document.getElementById('particles');
-        function createParticles() {
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.width = Math.random() * 4 + 1 + 'px';
-                particle.style.height = particle.style.width;
-                particle.style.animationDelay = Math.random() * 6 + 's';
-                particle.style.animationDuration = Math.random() * 4 + 4 + 's';
-                particleContainer.appendChild(particle);
-            }
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
-        createParticles();
+        :root {
+            --primary-accent: #3b82f6;
+        }
+    </style>
 
-        // ===== Scroll-triggered Card Animations (Intersection Observer) =====
+    <script>
+        // ===== Scroll-triggered Card Animations =====
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -284,58 +328,66 @@
             observer.observe(card);
         });
 
-        // ===== Interactive Card Tilt Effect =====
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = (y - centerY) / 12;
-                const rotateY = (centerX - x) / 12;
-                
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.04, 1.04, 1.04)`;
-                
-                // Move glow
-                const glow = card.querySelector('.card-glow');
-                if (glow) {
-                    glow.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(var(--card-accent-rgb), 0.15), transparent 40%)`;
-                }
-            });
 
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = '';
-                const glow = card.querySelector('.card-glow');
-                if (glow) {
-                    glow.style.background = '';
-                }
-            });
+
+        // ===== Typing Effect for Hero Title & Badge =====
+        const typingBadge = document.getElementById('typing-badge');
+        const badgeTexts = ["Cyber Security Enthusiast", "Python Specialist", "Vibe Coder"];
+        let badgeIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeBadge() {
+            const currentText = badgeTexts[badgeIndex];
+            
+            if (isDeleting) {
+                typingBadge.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingBadge.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentText.length) {
+                typeSpeed = 2000; // Pause at end
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                badgeIndex = (badgeIndex + 1) % badgeTexts.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeBadge, typeSpeed);
+        }
+        
+        // Start typing effects
+        setTimeout(typeBadge, 1000);
+
+        // Header blink effect on load
+        const logoText = document.querySelector('.logo-text');
+        logoText.innerHTML = logoText.textContent.split('').map(char => `<span>${char}</span>`).join('');
+        
+        // ===== Contact Reveal & Copy Logic =====
+        const revealBtn = document.getElementById('reveal-btn');
+        const emailRevealed = document.getElementById('email-revealed');
+        const copyBtn = document.getElementById('copy-btn');
+        const copySuccess = document.getElementById('copy-success');
+
+        revealBtn.addEventListener('click', () => {
+            revealBtn.style.display = 'none';
+            emailRevealed.style.display = 'flex';
+            emailRevealed.classList.add('visible');
         });
 
-        // ===== Typing Effect for Hero Title =====
-        const heroTag = document.querySelector('.hero-tag span');
-        if (heroTag) {
-            const text = heroTag.textContent;
-            heroTag.textContent = '';
-            let i = 0;
-            function typeWriter() {
-                if (i < text.length) {
-                    heroTag.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 50);
-                }
-            }
-            setTimeout(typeWriter, 800);
-        }
-
-        // ===== Smooth Parallax on Scroll =====
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const orbs = document.querySelectorAll('.gradient-orb');
-            orbs.forEach((orb, index) => {
-                const speed = (index + 1) * 0.3;
-                orb.style.transform = `translateY(${scrolled * speed}px)`;
+        copyBtn.addEventListener('click', () => {
+            const email = "rajukushwaha0891@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                copySuccess.classList.add('show');
+                setTimeout(() => {
+                    copySuccess.classList.remove('show');
+                }, 2000);
             });
         });
 
