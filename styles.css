@@ -2,12 +2,16 @@
     /* Color Tokens */
     --bg-primary: #ffffff;
     --bg-secondary: #fdfcff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #ffffff;
     --text-primary: #0f172a;
     --text-secondary: #4b5563;
     --text-muted: #9ca3af;
     --accent-1: #6366f1;
     --accent-2: #f43f5e;
     --accent-3: #06b6d4;
+    --border-subtle: rgba(15, 23, 42, 0.08);
+    --border-hover: rgba(15, 23, 42, 0.15);
     
     /* Technical Tokens */
     --font-mono: 'Fira Code', 'Courier New', monospace;
@@ -27,10 +31,13 @@
     --radius-md: 14px;
     --radius-lg: 24px;
     
+    --shadow-sm: 0 2px 8px -1px rgba(15, 23, 42, 0.04), 0 1px 3px -1px rgba(15, 23, 42, 0.02);
     --shadow-pro: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     --shadow-pro-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
     
     --ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
 /* Custom Scrollbar */
@@ -83,18 +90,26 @@ body {
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.4;
-    animation: blobFloat 20s infinite alternate;
+    filter: blur(80px);
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    animation: blobFloat 45s infinite alternate ease-in-out;
 }
 
-.blob-1 { background: rgba(99, 102, 241, 0.15); top: -200px; right: -100px; }
-.blob-2 { background: rgba(244, 63, 94, 0.12); bottom: -100px; left: -100px; animation-delay: -5s; }
-.blob-3 { background: rgba(6, 182, 212, 0.1); top: 30%; left: 20%; animation-delay: -10s; }
+.blob-1 { background: rgba(99, 102, 241, 0.12); top: -200px; right: -100px; }
+.blob-2 { background: rgba(244, 63, 94, 0.1); bottom: -100px; left: -100px; animation-delay: -10s; }
+.blob-3 { background: rgba(6, 182, 212, 0.08); top: 30%; left: 20%; animation-delay: -20s; }
 
 @keyframes blobFloat {
-    from { transform: translate(0, 0) scale(1); }
-    to { transform: translate(100px, 50px) scale(1.1); }
+    from { transform: translate3d(0, 0, 0) scale(1); }
+    to { transform: translate3d(80px, 40px, 0) scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blob {
+        animation: none !important;
+    }
 }
 
 body {
@@ -107,11 +122,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid var(--border-subtle);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s var(--ease-pro), box-shadow 0.3s var(--ease-pro), border-color 0.3s var(--ease-pro);
 }
 
 header.scrolled {
@@ -227,7 +240,7 @@ nav {
     color: var(--text-secondary);
     font-size: 0.95rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: color 0.3s var(--ease-pro);
     position: relative;
 }
 
@@ -315,17 +328,6 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gradientTextShift 8s infinite alternate;
-}
-
-@keyframes gradientTextShift {
-    from { background-position: 0% 50%; }
-    to { background-position: 100% 50%; }
-}
-
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
 }
 
 .hero-subtitle {
@@ -466,22 +468,23 @@ main {
 /* ===== Project Cards ===== */
 .card {
     position: relative;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
+    background: var(--bg-card, #ffffff);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     padding: 0;
     text-decoration: none;
     color: var(--text-primary);
     overflow: hidden;
-    transition: all 0.4s var(--ease-out-expo);
+    will-change: transform, box-shadow;
+    transition: transform 0.4s var(--ease-out-expo), border-color 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), background-color 0.4s var(--ease-out-expo);
     box-shadow: var(--shadow-sm);
 }
 
 .card:hover {
     transform: translateY(-8px);
     border-color: var(--card-accent);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 
+    background: var(--bg-card-hover);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06), 
                 0 0 25px rgba(var(--card-accent-rgb), 0.1);
 }
 
@@ -528,13 +531,6 @@ main {
     transition: opacity 0.4s ease;
 }
 
-.card:hover {
-    border-color: var(--border-hover);
-    background: var(--bg-card-hover);
-    box-shadow: 0 8px 40px rgba(var(--card-accent-rgb), 0.12),
-                0 0 80px rgba(var(--card-accent-rgb), 0.05);
-}
-
 .card:hover::before {
     opacity: 1;
 }
@@ -553,13 +549,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s var(--ease-pro), border-color 0.3s var(--ease-pro), transform 0.3s var(--ease-pro);
 }
 
 .icon-bg i {
     font-size: 1.4rem;
     color: var(--card-accent);
-    transition: all 0.4s var(--ease-spring);
+    transition: color 0.4s var(--ease-spring), transform 0.4s var(--ease-spring);
 }
 
 .card:hover .icon-bg {
@@ -616,7 +612,7 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     color: var(--text-muted);
-    transition: all 0.3s ease;
+    transition: border-color 0.3s var(--ease-pro), color 0.3s var(--ease-pro), background-color 0.3s var(--ease-pro);
 }
 
 .card:hover .tag {
@@ -637,13 +633,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.4s var(--ease-spring);
+    transition: background-color 0.4s var(--ease-spring), border-color 0.4s var(--ease-spring), transform 0.4s var(--ease-spring);
 }
 
 .card-arrow i {
     font-size: 0.75rem;
     color: var(--text-muted);
-    transition: all 0.4s var(--ease-spring);
+    transition: color 0.4s var(--ease-spring);
     transform: rotate(-45deg);
 }
 
@@ -663,9 +659,7 @@ footer {
     text-align: center;
     padding: 4rem 2rem;
     border-top: 1px solid var(--border-subtle);
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .footer-content p {
@@ -826,7 +820,7 @@ footer {
     align-items: center;
     gap: 0.75rem;
     margin: 0 auto;
-    transition: all 0.4s var(--ease-spring);
+    transition: transform 0.4s var(--ease-spring), box-shadow 0.4s var(--ease-spring);
     box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
 }
 
@@ -842,7 +836,7 @@ footer {
     gap: 1rem;
     opacity: 0;
     transform: translateY(10px);
-    transition: all 0.5s var(--ease-out-expo);
+    transition: opacity 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
 }
 
 .email-revealed.visible {
@@ -868,7 +862,7 @@ footer {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .copy-btn:hover {
