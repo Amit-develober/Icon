@@ -92,14 +92,11 @@ body {
     border-radius: 50%;
     filter: blur(80px);
     opacity: 0.35;
-    transform: translate3d(0, 0, 0);
-    will-change: transform;
-    animation: blobFloat 45s infinite alternate ease-in-out;
 }
 
 .blob-1 { background: rgba(99, 102, 241, 0.12); top: -200px; right: -100px; }
-.blob-2 { background: rgba(244, 63, 94, 0.1); bottom: -100px; left: -100px; animation-delay: -10s; }
-.blob-3 { background: rgba(6, 182, 212, 0.08); top: 30%; left: 20%; animation-delay: -20s; }
+.blob-2 { background: rgba(244, 63, 94, 0.1); bottom: -100px; left: -100px; }
+.blob-3 { background: rgba(6, 182, 212, 0.08); top: 30%; left: 20%; }
 
 @keyframes blobFloat {
     from { transform: translate3d(0, 0, 0) scale(1); }
